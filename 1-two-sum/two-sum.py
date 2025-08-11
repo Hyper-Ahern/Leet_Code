@@ -1,15 +1,14 @@
 class Solution(object):
     def twoSum(self, nums, target):
+        # Doing it better than O(n^2)
 
-        for index1, first_number in enumerate(nums):
-                        
-            for index2, second_number in enumerate(nums):
+        number_map = {}
 
-                if index1 == index2:
-                    # Skip to the next iteration
-                    pass
+        for index, number in enumerate(nums):
+            complement = target - number
+            
+            if complement in number_map:
+                return(number_map[complement], index)
 
-                elif (first_number + second_number == target):
-                    #The solution is found; Print out the indices
-
-                    return [index1, index2]  
+            else:
+                number_map[number] = index
