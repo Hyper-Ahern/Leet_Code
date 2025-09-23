@@ -1,0 +1,1 @@
+<h2><a href="https://leetcode.com/problems/majority-element">Majority Element</a></h2>
