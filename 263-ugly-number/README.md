@@ -1,0 +1,1 @@
+<h2><a href="https://leetcode.com/problems/ugly-number">Ugly Number</a></h2>
