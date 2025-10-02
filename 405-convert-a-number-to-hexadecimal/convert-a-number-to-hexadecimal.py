@@ -1,0 +1,25 @@
+class Solution(object):
+    def toHex(self, num):
+        """
+        :type num: int
+        :rtype: str
+        """
+
+        # whomp whomp
+
+        if num == 0: 
+            return '0'
+
+        map = '0123456789abcdef'
+        result = ''
+
+        #if negative (two's compliment)
+        if num < 0: 
+            num += 2 ** 32
+
+        while num > 0:
+            digit = num % 16
+            num = (num-digit) // 16
+            result += str(map[digit])
+
+        return result[::-1]
